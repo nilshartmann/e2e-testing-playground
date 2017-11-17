@@ -1,0 +1,36 @@
+# Login
+http POST :3000/login user=paul password=secret
+
+# "Authorized call":
+http :3000/customers AUTH_TOKEN:SESSION_0
+
+###
+POST http://localhost:7000/login
+content-type: application/json
+
+{
+  "username": "paul",
+  "password": "secret"
+}
+
+### Load greetings
+
+GET http://localhost:7000/greetings
+content-type: application/json
+AUTH_TOKEN: SESSION_0
+
+###
+
+### Add greeting
+
+POST http://localhost:7000/greetings
+content-type: application/json
+AUTH_TOKEN: SESSION_0
+
+{
+    "name": "Express",
+    "greeting": "Hello"
+  }
+
+###
+
