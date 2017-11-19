@@ -1,7 +1,5 @@
 import { t, Selector } from "testcafe";
-
-const selectByTestId = testDataId => Selector(`[data-test-id="${testDataId}"]`);
-
+import { selectByTestId } from "../utils";
 export default class LoginPageModel {
   constructor() {
     this.userNameInput = selectByTestId("username-input");

@@ -4487,6 +4487,10 @@ testcafe-legacy-api@3.1.1:
     strip-bom "^2.0.0"
     uglify-js "1.2.6"
 
+testcafe-react-selectors@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/testcafe-react-selectors/-/testcafe-react-selectors-1.0.2.tgz#700f9f0b9637440e2fb8c88ac0ee86f3c86ed971"
+
 testcafe-reporter-json@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/testcafe-reporter-json/-/testcafe-reporter-json-2.1.0.tgz#80b9b5a6dff2ee1de1f91e2670706c1472e64006"

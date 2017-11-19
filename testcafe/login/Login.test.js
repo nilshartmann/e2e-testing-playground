@@ -1,12 +1,8 @@
 import { Selector } from "testcafe";
-import { ClientFunction } from "testcafe";
-
+import { getPagePath } from "../utils";
 import LoginPageModel from "./LoginPageModel";
 
 fixture`Login Page`.page`http://localhost:8080`;
-
-// https://testcafe-discuss.devexpress.com/t/how-to-handle-redirect/496/2
-const getPagePath = ClientFunction(() => window.location.pathname);
 
 const loginPageModel = new LoginPageModel();
 
