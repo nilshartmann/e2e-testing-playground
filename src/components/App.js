@@ -4,6 +4,7 @@ import GreetingController from "./GreetingController";
 import GreetingDisplayController from "./GreetingDisplayController";
 import Login from "./Login";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { Sample } from "./Sample";
 
 const PrivateRoute = ({ component: Component, authorization, ...rest }) => (
   <Route
@@ -45,6 +46,7 @@ class App extends React.Component {
         <div>
           <h1>Greetings</h1>
           <Switch>
+            <Route path="/sample" component={Sample} />
             <Route path="/greet/:greetingId" component={GreetingDisplayController} />
             <Route
               path="/login"

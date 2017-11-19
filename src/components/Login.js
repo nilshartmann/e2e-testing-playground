@@ -22,10 +22,24 @@ class Login extends Component {
     return (
       <div>
         <p>You must log in to view the page at {from.pathname}</p>
-        <input onChange={event => this.updateModel(event)} name="username" placeholder="Your name" value={this.state.username} />
-        <input onChange={event => this.updateModel(event)} name="password" placeholder="Password" value={this.state.password} />
-        <button onClick={() => this.submitLogin()}>Login</button>
-        {this.state.error && <p>{this.state.error}</p>}
+        <input
+          data-test-id="username-input"
+          onChange={event => this.updateModel(event)}
+          name="username"
+          placeholder="Your name"
+          value={this.state.username}
+        />
+        <input
+          data-test-id="password-input"
+          onChange={event => this.updateModel(event)}
+          name="password"
+          placeholder="Password"
+          value={this.state.password}
+        />
+        <button data-test-id="submit-button" onClick={() => this.submitLogin()}>
+          Login
+        </button>
+        {this.state.error && <p data-test-id="error-text">{this.state.error}</p>}
       </div>
     );
   }
